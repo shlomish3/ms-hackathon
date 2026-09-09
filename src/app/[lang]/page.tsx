@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getDictionary } from "../../dictionaries";
+import { BrainCircuit } from "lucide-react";
 
 export default async function Home({ params: { lang } }: { params: { lang: string } }) {
   const dict = await getDictionary(lang);
@@ -8,9 +10,9 @@ export default async function Home({ params: { lang } }: { params: { lang: strin
   return (
     <div className="min-h-screen bg-slate-50 text-tech-slate flex flex-col font-sans">
       {/* Header */}
-      <header className="flex items-center justify-between p-6 max-w-6xl w-full mx-auto">
-        <div className="text-xl font-bold text-brand-navy hidden sm:block">
-          {dict.hero.invite}
+      <header className="flex items-center justify-between p-6 max-w-6xl w-full mx-auto relative z-20">
+        <div className="flex items-center gap-4">
+          <Image src="/shamir-logo.png" alt="Shamir Medical Center" width={250} height={40} className="object-contain" />
         </div>
         <nav className="flex items-center gap-6 ms-auto">
           <Link href={`/${otherLang}`} className="hover:text-brand-cyan transition font-semibold text-lg">
@@ -28,9 +30,11 @@ export default async function Home({ params: { lang } }: { params: { lang: strin
       <main className="flex-grow flex flex-col items-center w-full">
         {/* Hero Section */}
         <section className="w-full bg-brand-navy text-white py-20 px-6 flex flex-col items-center text-center relative overflow-hidden">
-          {/* Tech/Brain abstract background lines could go here via pseudo-elements or absolute divs */}
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-cyan via-brand-navy to-black"></div>
           
+          <BrainCircuit className="absolute -left-20 top-10 text-brand-cyan opacity-20 w-96 h-96 animate-pulse" strokeWidth={0.5} />
+          <BrainCircuit className="absolute -right-20 bottom-10 text-brand-cyan opacity-20 w-96 h-96" strokeWidth={0.5} />
+
           <div className="max-w-4xl relative z-10 flex flex-col items-center">
             <h2 className="text-xl md:text-2xl text-brand-cyan-light mb-4 font-semibold tracking-wide">
               {dict.hero.invite}
@@ -81,10 +85,7 @@ export default async function Home({ params: { lang } }: { params: { lang: strin
 
         {/* About / Partners Section */}
         <section className="py-12 px-6 w-full bg-slate-100 flex flex-col items-center text-center border-t border-slate-200">
-          <h3 className="text-2xl font-bold mb-6 text-brand-navy">{dict.about.title}</h3>
-          <p className="text-xl font-semibold text-slate-600 max-w-2xl">
-            {dict.about.description}
-          </p>
+          <Image src="/partners.png" alt="Partners" width={800} height={100} className="object-contain opacity-90" />
         </section>
       </main>
 

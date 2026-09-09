@@ -37,7 +37,7 @@
     "physicianQuestion": "What clinical or data challenges in MS care do you believe are ripe for innovation?",
     "engineerQuestion": "Please share a link to a past project or portfolio.",
     "resumeOrLinkedin": "LinkedIn Profile URL or Resume Link (Optional)",
-    "resumeOrLinkedinDesc": "Feel free to share a link so we can get to know you better.",
+    "resumeOrLinkedinDesc": "If you don't have a link, you can briefly describe your background in the next question.",
     "motivation": "Why do you want to participate in this specific MS Hackathon, and what unique perspective will you bring to a team? (Max 500 characters)",
     "submit": "Submit Application",
     "success": "Application submitted successfully!"

@@ -35,13 +35,18 @@ export default function ApplicationForm({
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      await fetch("https://script.google.com/macros/s/AKfycbz8hnTi4ouu0sPX99HXsGWlhrUKojxsBkYn5uI-q7mOo7L27aEHLQiLgLvJninTeIPj/exec", {
+      const formData = new URLSearchParams();
+      Object.entries(data).forEach(([key, value]) => {
+        formData.append(key, value || "");
+      });
+
+      await fetch("https://script.google.com/macros/s/AKfycbzYDR9OH0d74RFL4BZdKAn827d6hW7Y4wY-RgFTg8uV-Zc39ARU0baHmvNNsgpXureg/exec", {
         method: "POST",
         mode: "no-cors",
         headers: {
-          "Content-Type": "text/plain",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify(data),
+        body: formData.toString(),
       });
       setSubmitted(true);
     } catch (error) {
