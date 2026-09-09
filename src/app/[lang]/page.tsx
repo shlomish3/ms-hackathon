@@ -85,7 +85,11 @@ export default async function Home({ params: { lang } }: { params: { lang: strin
 
         {/* About / Partners Section */}
         <section className="py-12 px-6 w-full bg-slate-100 flex flex-col items-center text-center border-t border-slate-200">
-          <Image src="/partners.png" alt="Partners" width={800} height={100} className="object-contain opacity-90" />
+          <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-4xl gap-8">
+            <Image src="/footer-1.png" alt="FA Number" width={200} height={60} className="object-contain mix-blend-multiply" />
+            <Image src="/footer-2.png" alt="Novartis" width={250} height={60} className="object-contain mix-blend-multiply" />
+            <Image src="/footer-3.png" alt="MS Society" width={200} height={60} className="object-contain mix-blend-multiply" />
+          </div>
         </section>
       </main>
 
