@@ -22,6 +22,7 @@ export default function ApplicationForm({
   lang: string;
 }) {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const {
     register,
     handleSubmit,
@@ -31,9 +32,24 @@ export default function ApplicationForm({
 
   const selectedRole = watch("role");
 
-  const onSubmit = (data: FormData) => {
-    console.log("Form Data:", data);
-    setSubmitted(true);
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbz8hnTi4ouu0sPX99HXsGWlhrUKojxsBkYn5uI-q7mOo7L27aEHLQiLgLvJninTeIPj/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "text/plain",
+        },
+        body: JSON.stringify(data),
+      });
+      setSubmitted(true);
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -158,9 +174,10 @@ export default function ApplicationForm({
 
       <button
         type="submit"
-        className="mt-6 bg-brand-cyan hover:bg-brand-cyan-dark text-white font-bold py-4 rounded-xl text-lg transition shadow-md hover:shadow-lg"
+        disabled={isSubmitting}
+        className="mt-6 bg-brand-cyan hover:bg-brand-cyan-light text-brand-navy font-bold py-4 rounded-xl text-lg transition shadow-md hover:shadow-lg disabled:opacity-50"
       >
-        {dict.form.submit}
+        {isSubmitting ? "..." : dict.form.submit}
       </button>
     </form>
   );
