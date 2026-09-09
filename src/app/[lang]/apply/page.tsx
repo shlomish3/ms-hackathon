@@ -8,7 +8,7 @@ export default async function ApplyPage({ params: { lang } }: { params: { lang: 
   return (
     <div className="min-h-screen bg-slate-50 text-foreground flex flex-col font-sans py-12 px-6 items-center">
       <header className="w-full max-w-4xl mb-10">
-        <Link href={`/${lang}`} className="text-ms-orange hover:underline font-semibold text-lg flex items-center gap-2">
+        <Link href={`/${lang}`} className="text-brand-cyan hover:underline font-semibold text-lg flex items-center gap-2">
           {lang === "he" ? "← " : "← "}
           {dict.nav.home}
         </Link>

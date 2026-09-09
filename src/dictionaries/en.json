@@ -5,16 +5,25 @@
     "about": "About"
   },
   "hero": {
-    "title": "Code for a Cure. Innovate for Care.",
-    "subtitle": "Join the MS Hackathon to build real-world solutions for Multiple Sclerosis.",
-    "cta": "Apply to Join"
+    "invite": "Shamir Medical Center is proud to invite you",
+    "title": "MS HACKATHON",
+    "subtitle": "From Patients - To Creators and Entrepreneurs",
+    "description": "Come take part in a series of meetings where we map daily challenges in the MS journey, and turn your experience and knowledge into tech solutions combined with AI tools to improve quality of life.",
+    "cta": "Register Now"
+  },
+  "details": {
+    "topicTitle": "First Meeting Topic:",
+    "topicDesc": "First steps - challenges during the diagnosis period and the beginning of the disease",
+    "date": "Sunday, 11.10.2026, 16:30-21:30",
+    "location": "Shamir Medical Center, Neurological Institute",
+    "cost": "Participation is free and conditional on prior registration via the link."
   },
   "about": {
-    "title": "Why Multiple Sclerosis?",
-    "description": "Multiple Sclerosis is a complex disease requiring diverse perspectives to solve its greatest challenges. We are bringing together patients, physicians, and engineers."
+    "title": "In Collaboration With",
+    "description": "Novartis & The Israel Multiple Sclerosis Society"
   },
   "form": {
-    "title": "Application Portal",
+    "title": "Registration Portal",
     "basicInfo": "Basic Information",
     "name": "Full Name",
     "email": "Email Address",

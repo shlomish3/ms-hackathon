@@ -38,12 +38,12 @@ export default function ApplicationForm({
   if (submitted) {
     return (
       <div className="bg-white p-10 rounded-2xl shadow-xl max-w-lg w-full text-center">
-        <h2 className="text-3xl font-bold text-health-teal mb-4">
+        <h2 className="text-3xl font-bold text-brand-navy mb-4">
           {dict.form.success}
         </h2>
         <Link
           href={`/${lang}`}
-          className="text-ms-orange font-semibold hover:underline"
+          className="text-brand-cyan font-semibold hover:underline"
         >
           {dict.nav.home}
         </Link>
@@ -71,7 +71,7 @@ export default function ApplicationForm({
           </label>
           <input
             {...register("name", { required: true })}
-            className="w-full border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-ms-orange focus:border-ms-orange outline-none transition"
+            className="w-full border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-brand-cyan focus:border-brand-cyan outline-none transition"
           />
           {errors.name && <span className="text-red-500 text-sm">Required</span>}
         </div>
@@ -82,7 +82,7 @@ export default function ApplicationForm({
           <input
             type="email"
             {...register("email", { required: true })}
-            className="w-full border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-ms-orange focus:border-ms-orange outline-none transition"
+            className="w-full border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-brand-cyan focus:border-brand-cyan outline-none transition"
           />
           {errors.email && <span className="text-red-500 text-sm">Required</span>}
         </div>
@@ -95,7 +95,7 @@ export default function ApplicationForm({
         </h3>
         <select
           {...register("role", { required: true })}
-          className="w-full border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-ms-orange outline-none bg-white"
+          className="w-full border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-brand-cyan outline-none bg-white"
         >
           <option value="">-- Select --</option>
           <option value="patient">{dict.form.roleOptions.patient}</option>
@@ -116,7 +116,7 @@ export default function ApplicationForm({
           </label>
           <textarea
             {...register("roleAnswer", { required: true })}
-            className="w-full border border-slate-300 rounded-lg p-3 h-24 focus:ring-2 focus:ring-ms-orange outline-none resize-none"
+            className="w-full border border-slate-300 rounded-lg p-3 h-24 focus:ring-2 focus:ring-brand-cyan outline-none resize-none"
           ></textarea>
           {errors.roleAnswer && (
             <span className="text-red-500 text-sm">Required</span>
@@ -136,7 +136,7 @@ export default function ApplicationForm({
           type="url"
           placeholder="https://..."
           {...register("resumeOrLinkedin", { required: true })}
-          className="w-full border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-ms-orange outline-none transition"
+          className="w-full border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-brand-cyan outline-none transition"
         />
         {errors.resumeOrLinkedin && (
           <span className="text-red-500 text-sm">Required</span>
@@ -151,7 +151,7 @@ export default function ApplicationForm({
         <textarea
           maxLength={500}
           {...register("motivation", { required: true })}
-          className="w-full border border-slate-300 rounded-lg p-3 h-32 focus:ring-2 focus:ring-ms-orange outline-none resize-none"
+          className="w-full border border-slate-300 rounded-lg p-3 h-32 focus:ring-2 focus:ring-brand-cyan outline-none resize-none"
         ></textarea>
         {errors.motivation && (
           <span className="text-red-500 text-sm">Required</span>
@@ -160,7 +160,7 @@ export default function ApplicationForm({
 
       <button
         type="submit"
-        className="mt-6 bg-ms-orange hover:bg-ms-orange-dark text-white font-bold py-4 rounded-xl text-lg transition shadow-md hover:shadow-lg"
+        className="mt-6 bg-brand-cyan hover:bg-brand-cyan-dark text-white font-bold py-4 rounded-xl text-lg transition shadow-md hover:shadow-lg"
       >
         {dict.form.submit}
       </button>
