@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { getDictionary } from "../../dictionaries";
 import { BrainCircuit } from "lucide-react";
 
@@ -12,7 +11,8 @@ export default async function Home({ params: { lang } }: { params: { lang: strin
       {/* Header */}
       <header className="flex items-center justify-between p-6 max-w-6xl w-full mx-auto relative z-20">
         <div className="flex items-center gap-4">
-          <Image src="/shamir-logo.png" alt="Shamir Medical Center" width={250} height={40} className="object-contain" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/shamir-logo.png" alt="Shamir Medical Center" className="h-12 md:h-14 w-auto object-contain" />
         </div>
         <nav className="flex items-center gap-6 ms-auto">
           <Link href={`/${otherLang}`} className="hover:text-brand-cyan transition font-semibold text-lg">
@@ -83,17 +83,26 @@ export default async function Home({ params: { lang } }: { params: { lang: strin
           </div>
         </section>
 
-        {/* About / Partners Section */}
-        <section className="py-12 px-6 w-full bg-slate-100 flex flex-col items-center text-center border-t border-slate-200">
-          <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-4xl gap-8">
-            <Image src="/footer-1.png" alt="FA Number" width={200} height={60} className="object-contain mix-blend-multiply" />
-            <Image src="/footer-2.png" alt="Novartis" width={250} height={60} className="object-contain mix-blend-multiply" />
-            <Image src="/footer-3.png" alt="MS Society" width={200} height={60} className="object-contain mix-blend-multiply" />
+        {/* Partners & Footer Logos Section */}
+        <section className="py-8 px-6 w-full bg-[#001a3d] border-t border-slate-700 flex justify-center">
+          <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-5xl gap-6">
+            <div className="flex items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-fa.png" alt="FA-11764229" className="h-10 w-auto object-contain rounded" />
+            </div>
+            <div className="flex items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-novartis.png" alt="בשיתוף עם NOVARTIS" className="h-12 w-auto object-contain rounded" />
+            </div>
+            <div className="flex items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-ms-society.png" alt="הבית לחולי טרשת נפוצה" className="h-12 w-auto object-contain rounded" />
+            </div>
           </div>
         </section>
       </main>
 
-      <footer className="w-full bg-tech-slate py-8 text-center text-slate-400 mt-auto">
+      <footer className="w-full bg-[#001026] py-6 text-center text-slate-400 text-sm">
         <p>© 2026 MS Hackathon - Shamir Medical Center.</p>
       </footer>
     </div>

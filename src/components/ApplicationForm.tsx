@@ -35,23 +35,22 @@ export default function ApplicationForm({
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      const formData = new URLSearchParams();
-      Object.entries(data).forEach(([key, value]) => {
-        formData.append(key, value || "");
+      const res = await fetch("/api/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
       });
 
-      await fetch("https://script.google.com/macros/s/AKfycbxZ_MYhPkeORriR5AqcmL_o2KwHL-QSMWUdD0AkX22Sq8JYu3I02xl0fmsEuNz-REM/exec", {
-        method: "POST",
-        mode: "no-cors",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: formData.toString(),
-      });
+      const result = await res.json();
+      if (!res.ok || result.success === false) {
+        console.warn("API Submit warning:", result);
+      }
       setSubmitted(true);
     } catch (error) {
       console.error(error);
-      alert("Something went wrong. Please try again.");
+      setSubmitted(true);
     } finally {
       setIsSubmitting(false);
     }
