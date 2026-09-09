@@ -84,34 +84,48 @@ export default async function Home({ params: { lang } }: { params: { lang: strin
         </section>
 
         {/* Partners & Footer Logos Section */}
-        <section className="py-10 px-6 w-full bg-[#001738] border-t border-slate-700/60 flex justify-center">
-          <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl gap-8">
-            {/* 1. FA Code (Typed text) */}
-            <div className="text-slate-400 font-mono text-sm tracking-widest font-semibold order-3 md:order-1">
-              FA-11764229
-            </div>
-
-            {/* 2. Novartis with typed 'בשיתוף עם:' */}
-            <div className="flex flex-col sm:flex-row items-center gap-3 order-2">
-              <span className="text-white text-base md:text-lg font-medium">
+        <section className="py-12 px-6 w-full bg-[#001738] border-t border-slate-700/60 flex flex-col items-center">
+          <div className="w-full max-w-6xl flex flex-col items-center gap-8">
+            {/* Heading: בשיתוף עם / In collaboration with */}
+            <div className="flex items-center gap-4 w-full justify-center">
+              <div className="h-px bg-slate-700/60 flex-1 max-w-xs hidden sm:block"></div>
+              <span className="text-slate-200 text-lg md:text-xl font-semibold tracking-wide">
                 {lang === "he" ? "בשיתוף עם:" : "In collaboration with:"}
               </span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/logo-novartis-white.svg"
-                alt="Novartis"
-                className="h-9 md:h-11 w-auto object-contain"
-              />
+              <div className="h-px bg-slate-700/60 flex-1 max-w-xs hidden sm:block"></div>
             </div>
 
-            {/* 3. The official logo for הבית לחולי טרשת נפוצה */}
-            <div className="flex items-center order-1 md:order-3">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/logo-mshome-white.png"
-                alt="הבית לחולי טרשת נפוצה"
-                className="h-14 md:h-16 w-auto object-contain"
-              />
+            {/* Both Partners Logos displayed together */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-10 md:gap-16 w-full">
+              {/* Novartis Logo */}
+              <div className="flex items-center justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/logo-novartis-white.svg"
+                  alt="Novartis"
+                  className="h-10 md:h-12 w-auto object-contain hover:opacity-95 transition"
+                />
+              </div>
+
+              {/* Vertical divider on desktop */}
+              <div className="hidden sm:block w-px h-12 bg-slate-600/50"></div>
+
+              {/* קהילת הבית לחולי טרשת נפוצה Logo */}
+              <div className="flex items-center justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/logo-mshome-white.png"
+                  alt="קהילת הבית לחולי טרשת נפוצה"
+                  className="h-14 md:h-16 w-auto object-contain hover:opacity-95 transition"
+                />
+              </div>
+            </div>
+
+            {/* FA Regulation Code */}
+            <div className="w-full flex justify-center md:justify-start pt-2">
+              <span className="text-slate-400 font-mono text-xs md:text-sm tracking-widest font-semibold">
+                FA-11764229
+              </span>
             </div>
           </div>
         </section>
