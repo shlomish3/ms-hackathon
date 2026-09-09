@@ -1,0 +1,36 @@
+{
+  "nav": {
+    "home": "Home",
+    "apply": "Apply Now",
+    "about": "About"
+  },
+  "hero": {
+    "title": "Code for a Cure. Innovate for Care.",
+    "subtitle": "Join the MS Hackathon to build real-world solutions for Multiple Sclerosis.",
+    "cta": "Apply to Join"
+  },
+  "about": {
+    "title": "Why Multiple Sclerosis?",
+    "description": "Multiple Sclerosis is a complex disease requiring diverse perspectives to solve its greatest challenges. We are bringing together patients, physicians, and engineers."
+  },
+  "form": {
+    "title": "Application Portal",
+    "basicInfo": "Basic Information",
+    "name": "Full Name",
+    "email": "Email Address",
+    "roleLabel": "Which perspective do you bring?",
+    "roleOptions": {
+      "patient": "Patient / Caregiver / Advocate",
+      "physician": "Healthcare Professional / Researcher",
+      "engineer": "Software Engineer / Designer / PM"
+    },
+    "patientQuestion": "What is one specific daily hurdle related to MS that you wish technology could solve?",
+    "physicianQuestion": "What clinical or data challenges in MS care do you believe are ripe for innovation?",
+    "engineerQuestion": "Please share a link to a past project or portfolio.",
+    "resumeOrLinkedin": "LinkedIn Profile URL or Resume Link",
+    "resumeOrLinkedinDesc": "Please provide at least one so we can review your background.",
+    "motivation": "Why do you want to participate in this specific MS Hackathon, and what unique perspective will you bring to a team? (Max 500 characters)",
+    "submit": "Submit Application",
+    "success": "Application submitted successfully!"
+  }
+}
