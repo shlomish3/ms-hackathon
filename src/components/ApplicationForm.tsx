@@ -17,6 +17,7 @@ export default function ApplicationForm({
   dict,
   lang,
 }: {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   dict: any;
   lang: string;
 }) {
