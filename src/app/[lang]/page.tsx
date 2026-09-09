@@ -84,25 +84,40 @@ export default async function Home({ params: { lang } }: { params: { lang: strin
         </section>
 
         {/* Partners & Footer Logos Section */}
-        <section className="py-8 px-6 w-full bg-[#001a3d] border-t border-slate-700 flex justify-center">
-          <div className="flex flex-col sm:flex-row items-center justify-between w-full max-w-5xl gap-6">
-            <div className="flex items-center">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo-fa.png" alt="FA-11764229" className="h-10 w-auto object-contain rounded" />
+        <section className="py-10 px-6 w-full bg-[#001738] border-t border-slate-700/60 flex justify-center">
+          <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl gap-8">
+            {/* 1. FA Code (Typed text) */}
+            <div className="text-slate-400 font-mono text-sm tracking-widest font-semibold order-3 md:order-1">
+              FA-11764229
             </div>
-            <div className="flex items-center">
+
+            {/* 2. Novartis with typed 'בשיתוף עם:' */}
+            <div className="flex flex-col sm:flex-row items-center gap-3 order-2">
+              <span className="text-white text-base md:text-lg font-medium">
+                {lang === "he" ? "בשיתוף עם:" : "In collaboration with:"}
+              </span>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo-novartis.png" alt="בשיתוף עם NOVARTIS" className="h-12 w-auto object-contain rounded" />
+              <img
+                src="/logo-novartis-white.svg"
+                alt="Novartis"
+                className="h-9 md:h-11 w-auto object-contain"
+              />
             </div>
-            <div className="flex items-center">
+
+            {/* 3. The official logo for הבית לחולי טרשת נפוצה */}
+            <div className="flex items-center order-1 md:order-3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo-ms-society.png" alt="הבית לחולי טרשת נפוצה" className="h-12 w-auto object-contain rounded" />
+              <img
+                src="/logo-mshome-white.png"
+                alt="הבית לחולי טרשת נפוצה"
+                className="h-14 md:h-16 w-auto object-contain"
+              />
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="w-full bg-[#001026] py-6 text-center text-slate-400 text-sm">
+      <footer className="w-full bg-[#000f24] py-6 text-center text-slate-500 text-sm border-t border-slate-800">
         <p>© 2026 MS Hackathon - Shamir Medical Center.</p>
       </footer>
     </div>
