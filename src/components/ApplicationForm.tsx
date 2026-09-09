@@ -128,7 +128,7 @@ export default function ApplicationForm({
       {/* Required Link (Resume or LinkedIn) */}
       <div className="flex flex-col gap-4 mt-4">
         <label className="block text-sm font-medium text-slate-600 mb-1">
-          {dict.form.resumeOrLinkedin} *
+          {dict.form.resumeOrLinkedin}
         </label>
         <p className="text-xs text-slate-500 mb-2">
           {dict.form.resumeOrLinkedinDesc}
@@ -136,12 +136,9 @@ export default function ApplicationForm({
         <input
           type="url"
           placeholder="https://..."
-          {...register("resumeOrLinkedin", { required: true })}
+          {...register("resumeOrLinkedin")}
           className="w-full border border-slate-300 rounded-lg p-3 focus:ring-2 focus:ring-brand-cyan outline-none transition"
         />
-        {errors.resumeOrLinkedin && (
-          <span className="text-red-500 text-sm">Required</span>
-        )}
       </div>
 
       {/* Motivation */}
