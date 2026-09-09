@@ -40,7 +40,7 @@ export default function ApplicationForm({
         formData.append(key, value || "");
       });
 
-      await fetch("https://script.google.com/macros/s/AKfycbzYDR9OH0d74RFL4BZdKAn827d6hW7Y4wY-RgFTg8uV-Zc39ARU0baHmvNNsgpXureg/exec", {
+      await fetch("https://script.google.com/macros/s/AKfycbxZ_MYhPkeORriR5AqcmL_o2KwHL-QSMWUdD0AkX22Sq8JYu3I02xl0fmsEuNz-REM/exec", {
         method: "POST",
         mode: "no-cors",
         headers: {
